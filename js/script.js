@@ -8,9 +8,13 @@ startGame.addEventListener("click", function(){
 
     console.log("l'utente ha scelto il livello di difficoltà", difficultyLevel);
 
+});
+
+//con questa funzione tiene conto del numero di quadrati da creare
+function getNBoxes(){
     //creo una variabile che tenga conto del numero di quadrati da creare in base al livello di difficoltà
     let nBoxes;
-
+    
     //assegno alla variabile nBoxes il numero di scatole che voglio creare
     if(difficultyLevel === "1"){
         //assegno alla variabile "nBoxes" il valore 49
@@ -22,18 +26,6 @@ startGame.addEventListener("click", function(){
         //assegno alla variabile "nBoxes" il valore 100
         nBoxes = 100;
     }
-})
 
-
-
-/*
-
-if (difficultyLevel === "1"){
-    //crea 49 celle
-}else if (difficultyLevel === "2"){
-    //crea 81 celle
-}else if (difficultyLevel === "3"){
-    //crea 100 celle
+    return nBoxes;
 }
-
- */
