@@ -61,5 +61,3 @@ function boxesGenerator (value){
     }
 
 }
-
- 

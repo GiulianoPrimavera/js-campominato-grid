@@ -16,8 +16,9 @@ main{
     padding: 20px;
 }
 .main_container{
-    margin: 0 500px;
+    width: 50%;
     height: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
