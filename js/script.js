@@ -52,9 +52,9 @@ function boxesGenerator (value){
     for (let i = 1; i <= value; i++){
         const boxN = document.createElement("div");
         boxN.classList.add("box");
-        boxN.innerHTML += `${i}`
+        boxN.innerHTML += `<p>${i}</p>`
         boxN.style.width =  boxDimension + "%";
-        
+        boxN.style.height = boxDimension + "%"; 
         
         
         mainContainer.append(boxN);
