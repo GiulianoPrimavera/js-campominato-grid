@@ -61,3 +61,10 @@ function boxesGenerator (value){
     }
 
 }
+
+/* const singleBox = document.getElementsByClassName(".box");
+
+
+singleBox.addEventListener("click", function(){
+    this.classList.toggle("clicked")
+}) */
