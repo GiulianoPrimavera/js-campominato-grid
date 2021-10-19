@@ -15,7 +15,6 @@ startGame.addEventListener("click", function(){
 
     //genero le scatole
     boxesGenerator(totalBoxes);
-
 });
 
 //con questa funzione tengo conto del numero di quadrati da creare
@@ -44,12 +43,9 @@ function boxesGenerator (value){
     mainContainer.innerHTML = "";
     
     for (let i = 0; i <= value; i++){
-
-        const boxN = document.createElement("div");
-        boxN.classList.add("box");
-
-        mainContainer.append(boxN);
+        mainContainer.innerHTML += `<div class="box">${i}</div>`
     }
 
 }
 
+ 
