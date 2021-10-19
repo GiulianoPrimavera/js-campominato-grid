@@ -18,8 +18,6 @@ startGame.addEventListener("click", function(){
 
 });
 
-let percentWidth;
-
 //con questa funzione tengo conto del numero di quadrati da creare
 function getNBoxes(value){
     //creo una variabile che tenga conto del numero di quadrati da creare in base al livello di difficoltà
@@ -29,15 +27,12 @@ function getNBoxes(value){
     if(value === "1"){
         //assegno alla variabile "nBoxes" il valore 49
         nBoxes = 49;
-        percentWidth = 7;
     }else if(value === "2"){
         //assegno alla variabile "nBoxes" il valore 81
         nBoxes = 81;     
-        percentWidth = 9;
     }else if(value === "3"){
         //assegno alla variabile "nBoxes" il valore 100
         nBoxes = 100;
-        percentWidth = 10;
     }
     
 
@@ -51,6 +46,7 @@ function boxesGenerator (value){
 
     mainContainer.innerHTML = "";
 
+    const percentWidth = Math.sqrt(value);
     const boxDimension = 100 / percentWidth;
     
     for (let i = 1; i <= value; i++){
@@ -58,6 +54,7 @@ function boxesGenerator (value){
         boxN.classList.add("box");
         boxN.innerHTML += `${i}`
         boxN.style.width =  boxDimension + "%";
+        
         
         
         mainContainer.append(boxN);
