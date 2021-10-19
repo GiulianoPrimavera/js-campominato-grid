@@ -1,5 +1,6 @@
 const startGame = document.getElementById("start_game");
 const difficultyOption = document.getElementById("difficulty_option");
+const mainContainer = document.getElementById("main_container");
 
 //al click del bottone "invia" devo leggere il valore del livello di difficoltà del select
 startGame.addEventListener("click", function(){
@@ -9,7 +10,12 @@ startGame.addEventListener("click", function(){
     console.log("l'utente ha scelto il livello di difficoltà", difficultyLevel);
 
     //qui viene scelto il numero di caselle da creare
-    console.log(getNBoxes(difficultyLevel));
+    const totalBoxes = getNBoxes(difficultyLevel);
+    console.log("il numero totale di scatole è", totalBoxes);
+
+    //genero le scatole
+    boxesGenerator(totalBoxes);
+
 });
 
 //con questa funzione tengo conto del numero di quadrati da creare
@@ -28,8 +34,22 @@ function getNBoxes(value){
         //assegno alla variabile "nBoxes" il valore 100
         nBoxes = 100;
     }
-
+    
     return nBoxes;
 }
 
-//mi serve una funzione che crea
+//devo generare le boxes
+function boxesGenerator (value){
+
+    mainContainer.innerHTML = "";
+    
+    for (let i = 0; i <= value; i++){
+
+        const boxN = document.createElement("div");
+        boxN.classList.add("box");
+
+        mainContainer.append(boxN);
+    }
+
+}
+
