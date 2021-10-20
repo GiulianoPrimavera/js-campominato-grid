@@ -52,19 +52,17 @@ function boxesGenerator (value){
     for (let i = 1; i <= value; i++){
         const boxN = document.createElement("div");
         boxN.classList.add("box");
-        boxN.innerHTML += `<p>${i}</p>`
+        boxN.innerHTML += `<p class="user_select_none">${i}</p>`
         boxN.style.width =  boxDimension + "%";
         boxN.style.height = boxDimension + "%"; 
-        
+        //qui ci devi mettere il listener al click della box (se non lo metti qua)
+        boxN.addEventListener("click", function(){
+            this.classList.toggle("clicked")
+        })        
         
         mainContainer.append(boxN);
     }
 
 }
 
-/* const singleBox = document.getElementsByClassName(".box");
-
-
-singleBox.addEventListener("click", function(){
-    this.classList.toggle("clicked")
-}) */
+                 

@@ -34,7 +34,14 @@ main{
     justify-content: center;
     align-items: center;
 }
-/* .clicked{
+.clicked{
     background-color: rgb(74, 150, 197);
+    border-right: 4px solid rgb(135, 255, 245); 
+    border-bottom: 4px solid rgb(135, 255, 245); 
+    border-top: 4px solid rgb(0, 185, 170); 
+    border-left: 4px solid rgb(0, 185, 170); 
     color: white;
-} */
+}
+.user_select_none{
+    user-select: none;
+}
