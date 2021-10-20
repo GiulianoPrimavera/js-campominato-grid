@@ -35,7 +35,7 @@ main{
     align-items: center;
 }
 .clicked{
-    background-color: rgb(74, 150, 197);
+    background-color: rgb(74, 173, 197);
     border-right: 4px solid rgb(135, 255, 245); 
     border-bottom: 4px solid rgb(135, 255, 245); 
     border-top: 4px solid rgb(0, 185, 170); 
