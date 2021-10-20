@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 main{
     background-color: lightblue;
@@ -41,7 +42,4 @@ main{
     border-top: 6px solid rgb(0, 185, 170); 
     border-left: 6px solid rgb(0, 185, 170); 
     color: white;
-}
-.user_select_none{
-    user-select: none;
 }
